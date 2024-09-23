@@ -1,6 +1,13 @@
-//first row
+//blog
+document.getElementById("blog-1")
+    .addEventListener("click", function () {
+        window.location.href = '/blog.html';
+        console.log('clicked');
+    })
+//first section
 document.getElementById("btn-11").addEventListener("click", function (event) {
     event.preventDefault();
+    console.log("first section");
     const inputValue = getInputValue("input-1");
     const initialBalance = getBalance("balance-2");
     const donationBalanceFinal = inputValue + initialBalance;
@@ -14,14 +21,76 @@ document.getElementById("btn-11").addEventListener("click", function (event) {
     console.log("initial account balance:", initialAccountBalance, "donation:", inputValue, "present Account balance:", accountBalance);
 
 
-    // history
-    const historyText = document.createElement("div");
-    historyText.innerHTML = `
-    <h3 class="font-bold text-xl">   
-     ${inputValue} Taka is Donated for famine-2024 at Feni, Bangladesh.</h3>
-    <p class="font-light text-base">
-    ${new Date().setFullYear(2024)} 
-    </p>
+    // // history
+    // first line
+    const historyText = document.createElement("p");
+    historyText.innerText = `
+    ${inputValue} Donate for Flood at Noakhali, Bangladesh.
     `;
-    document.getElementById("history-container").appendChild(historyText);
+    document.getElementById("first-line").appendChild(historyText);
+
+    // second line
+    const time = new Date();
+    document.getElementById("second-line").innerHTML = time;
+
+
+})
+
+//second section
+document.getElementById("btn-12").addEventListener("click", function (event) {
+    event.preventDefault();
+    console.log("second section");
+    const inputValue = getInputValue("input-2");
+    const initialBalance = getBalance("balance-3");
+    const donationBalanceFinal = inputValue + initialBalance;
+    //final donation value
+    document.getElementById("balance-3").innerText = donationBalanceFinal;
+    console.log("Input donation:", inputValue, "initial Donation balance:", initialBalance, "final balance:", donationBalanceFinal);
+    //my account balance
+    const initialAccountBalance = getBalance("balance-1");
+    const accountBalance = initialAccountBalance - inputValue;
+    document.getElementById("balance-1").innerText = accountBalance;
+    console.log("initial account balance:", initialAccountBalance, "donation:", inputValue, "present Account balance:", accountBalance);
+
+
+    // history
+       // first line
+    const historyText = document.createElement("p");
+    historyText.innerText = `
+    ${inputValue} Donate for Flood Relief in Feni,Bangladesh.
+    `;
+    document.getElementById("first-line").appendChild(historyText);
+
+    // second line
+    const time = new Date();
+    document.getElementById("second-line").innerHTML = time;
+})
+//Third section
+document.getElementById("btn-13").addEventListener("click", function (event) {
+    event.preventDefault();
+    console.log("Third section");
+    const inputValue = getInputValue("input-3");
+    const initialBalance = getBalance("balance-4");
+    const donationBalanceFinal = inputValue + initialBalance;
+    //final donation value
+    document.getElementById("balance-4").innerText = donationBalanceFinal;
+    console.log("Input donation:", inputValue, "initial Donation balance:", initialBalance, "final balance:", donationBalanceFinal);
+    //my account balance
+    const initialAccountBalance = getBalance("balance-1");
+    const accountBalance = initialAccountBalance - inputValue;
+    document.getElementById("balance-1").innerText = accountBalance;
+    console.log("initial account balance:", initialAccountBalance, "donation:", inputValue, "present Account balance:", accountBalance);
+
+
+     // history
+     // first line
+     const historyText = document.createElement("p");
+     historyText.innerText = `
+     ${inputValue} Aid for Injured in the Quota Movement.
+     `;
+     document.getElementById("first-line").appendChild(historyText);
+ 
+     // second line
+     const time = new Date();
+     document.getElementById("second-line").innerHTML = time;
 })

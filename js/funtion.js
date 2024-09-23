@@ -9,3 +9,21 @@ function getBalance(id) {
     const balanceAmountNumber = parseFloat(balanceAmount);
     return balanceAmountNumber;
 }
+
+function btnColorChange(id){
+document.getElementById("btn-1").classList.remove("bottle-green");
+document.getElementById("btn-2").classList.remove("bottle-green");
+
+document.getElementById(id).classList.add("bottle-green");
+
+}
+function displaySection (id){
+    document.getElementById('first-section').classList.add('hidden');
+    document.getElementById('history-container').classList.add('hidden');
+    
+    //show section with called id
+    
+    document.getElementById(id).classList.remove('hidden');
+    return;
+    
+    }
