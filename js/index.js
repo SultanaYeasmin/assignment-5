@@ -25,13 +25,12 @@ document.getElementById("btn-11").addEventListener("click", function (event) {
         //final donation value
         document.getElementById("balance-2").innerText = donationBalanceFinal;
         console.log("Input donation:", inputValue, "initial Donation balance:", initialBalance, "final balance:", donationBalanceFinal);
+        
         //my account balance
-
         const accountBalance = initialAccountBalance - inputValue;
         document.getElementById("balance-1").innerText = accountBalance;
         console.log("initial account balance:", initialAccountBalance, "donation:", inputValue, "present Account balance:", accountBalance);
-
-
+       
         // // history
         // first line
         const historyText = document.createElement("p");
