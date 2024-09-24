@@ -16,34 +16,33 @@ document.getElementById("btn-11").addEventListener("click", function (event) {
     if (inputValue > initialAccountBalance || isNaN(inputValue) || inputValue == '') {
         alert('Invalid input value!');
         return;
-    }  
-        
-        else{
+    }
+
+    else {
 
         const initialBalance = getBalance("balance-2");
         const donationBalanceFinal = inputValue + initialBalance;
         //final donation value
         document.getElementById("balance-2").innerText = donationBalanceFinal;
         console.log("Input donation:", inputValue, "initial Donation balance:", initialBalance, "final balance:", donationBalanceFinal);
-        
+
         //my account balance
         const accountBalance = initialAccountBalance - inputValue;
         document.getElementById("balance-1").innerText = accountBalance;
         console.log("initial account balance:", initialAccountBalance, "donation:", inputValue, "present Account balance:", accountBalance);
-       
-        // // history
-        // first line
-        const historyText = document.createElement("p");
-        historyText.innerText = `
-      ${inputValue} Donate for Flood at Noakhali, Bangladesh.
-                              `;
-        document.getElementById("first-line").appendChild(historyText);
 
-        // second line
-        const time = new Date();
-        document.getElementById("second-line").innerHTML = time;
+        // history
+        const historyText = document.createElement("div");
+        historyText.classList.add("border", "rounded-xl", "border-b-2", "p-2", "my-5")
+        historyText.innerHTML = `
+            <h3 class="font-bold text-xl mt-3"> ${inputValue} Taka is Donated for Flood at Noakhali, Bangladesh.</h3>
+            <p class="font-light text-base" id="second-line">Date: ${new Date()} </p>
+           `;
+        document.getElementById("history-container").appendChild(historyText);
+
+
     }
- 
+
 })
 
 //second section
@@ -55,39 +54,30 @@ document.getElementById("btn-12").addEventListener("click", function (event) {
     if (inputValue > initialAccountBalance || isNaN(inputValue) || inputValue == '') {
         alert('Invalid input value!');
         return;
-    }  
+    }
+
+    else {
+        const initialBalance = getBalance("balance-3");
+        //final donation value
+        const donationBalanceFinal = inputValue + initialBalance;
+        document.getElementById("balance-3").innerText = donationBalanceFinal;
+        console.log("Input donation:", inputValue, "initial Donation balance:", initialBalance, "final balance:", donationBalanceFinal);
+
+        //my account balance
+        const accountBalance = initialAccountBalance - inputValue;
+        document.getElementById("balance-1").innerText = accountBalance;
+        console.log("initial account balance:", initialAccountBalance, "donation:", inputValue, "present Account balance:", accountBalance);
         
-        else{
+        // history-2
+        const historyText = document.createElement("div");
+        historyText.classList.add("border", "rounded-xl", "border-b-2", "p-2", "my-5")
+        historyText.innerHTML = `
+            <h3 class="font-bold text-xl mt-3"> ${inputValue} Taka is Donated for Flood Relief at Feni, Bangladesh.</h3>
+            <p class="font-light text-base" id="second-line">Date: ${new Date()} </p>
+           `;
+        document.getElementById("history-container").appendChild(historyText);}
 
-
-
-
-    const initialBalance = getBalance("balance-3");
-
-
-    //final donation value
-    const donationBalanceFinal = inputValue + initialBalance;
-    document.getElementById("balance-3").innerText = donationBalanceFinal;
-    console.log("Input donation:", inputValue, "initial Donation balance:", initialBalance, "final balance:", donationBalanceFinal);
-
-    //my account balance
-    const accountBalance = initialAccountBalance - inputValue;
-    document.getElementById("balance-1").innerText = accountBalance;
-    console.log("initial account balance:", initialAccountBalance, "donation:", inputValue, "present Account balance:", accountBalance);
-
-
-    // history
-    // first line
-    const historyText = document.createElement("p");
-    historyText.innerText = `
-    ${inputValue} Donate for Flood Relief in Feni,Bangladesh.
-    `;
-    document.getElementById("first-line").appendChild(historyText);
-
-    // second line
-    const time = new Date();
-    document.getElementById("second-line").innerHTML = time;}
-})
+    })
 
 //Third section
 document.getElementById("btn-13").addEventListener("click", function (event) {
@@ -98,30 +88,27 @@ document.getElementById("btn-13").addEventListener("click", function (event) {
     if (inputValue > initialAccountBalance || isNaN(inputValue) || inputValue == '') {
         alert('Invalid input value!');
         return;
-    }  
-        
-        else{
+    }
 
-    const initialBalance = getBalance("balance-4");
-    const donationBalanceFinal = inputValue + initialBalance;
-    //final donation value
-    document.getElementById("balance-4").innerText = donationBalanceFinal;
-    console.log("Input donation:", inputValue, "initial Donation balance:", initialBalance, "final balance:", donationBalanceFinal);
+    else {
+        const initialBalance = getBalance("balance-4");
+        const donationBalanceFinal = inputValue + initialBalance;
+        //final donation value
+        document.getElementById("balance-4").innerText = donationBalanceFinal;
+        console.log("Input donation:", inputValue, "initial Donation balance:", initialBalance, "final balance:", donationBalanceFinal);
 
-    //my account balance
-    const accountBalance = initialAccountBalance - inputValue;
-    document.getElementById("balance-1").innerText = accountBalance;
-    console.log("initial account balance:", initialAccountBalance, "donation:", inputValue, "present Account balance:", accountBalance);
-        
-    // history
-    // first line
-    const historyText = document.createElement("p");
-    historyText.innerText = `
-     ${inputValue} Aid for Injured in the Quota Movement.
-     `;
-    document.getElementById("first-line").appendChild(historyText);
+        //my account balance
+        const accountBalance = initialAccountBalance - inputValue;
+        document.getElementById("balance-1").innerText = accountBalance;
+        console.log("initial account balance:", initialAccountBalance, "donation:", inputValue, "present Account balance:", accountBalance);
 
-    // second line
-    const time = new Date();
-    document.getElementById("second-line").innerHTML = time;}
+        // history-3
+        const historyText = document.createElement("div");
+        historyText.classList.add("border", "rounded-xl", "border-b-2", "p-2", "my-5")
+        historyText.innerHTML = `
+            <h3 class="font-bold text-xl mt-3"> ${inputValue} Taka is Donated for injured in the quota movement in Bangladesh.</h3>
+            <p class="font-light text-base" id="second-line">Date: ${new Date()} </p>
+           `;
+        document.getElementById("history-container").appendChild(historyText);}
+    
 })
