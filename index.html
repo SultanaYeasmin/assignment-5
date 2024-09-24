@@ -28,17 +28,23 @@
         .bottle-green {
             background-color: #B4F461;
         }
+        /* #sticky-top{
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+        } */
     </style>
 
 </head>
 
 <body class="font-Lexend">
-    <header>
-        <nav class="lg:bg-purple-100">
-            <div class="navbar md:container md:mx-auto">
+    <header class="sticky top-0 z-30" id="sticky-top">
+        <nav class="lg:bg-purple-100 ">
+            <div class="navbar md:container md:mx-auto" >
                 <!-- nav left -->
                 <div class="navbar-start px-0 ]">
-                    <a id="blog-1" class="btn px-3 lg:px-4 lg:w-24 lg:h-12 bottle-green text-xs lg:text-xl font-semibold">Blog</a>
+                    <a id="blog-1"
+                        class="btn px-3 lg:px-4 lg:w-24 lg:h-12 bottle-green text-xs lg:text-xl font-semibold">Blog</a>
 
                 </div>
                 <div class="navbar-center lg:flex px-0 ">
@@ -204,7 +210,7 @@
                 </div>
                 <p class="font-light text-base" id="second-line"> </p>
             </div>
-            
+
         </div>
     </main>
 
