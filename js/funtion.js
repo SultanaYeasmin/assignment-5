@@ -1,3 +1,9 @@
+//NOT FLOAT VALUE
+function getInputValue1(id) {
+    const inputValue = document.getElementById(id).value;
+    return inputValue;
+}
+// FLOAT VALUE
 function getInputValue(id) {
     const inputValue = document.getElementById(id).value;
     const inputValueNumber = parseFloat(inputValue)
