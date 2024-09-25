@@ -1,14 +1,13 @@
 //blog.html 
 document.getElementById("blog-1")
     .addEventListener("click", function () {
-        window.location.href = '/blog.html';
+        window.location.href = './blog.html';
         console.log('clicked');
     })
 
 // //first section
 document.getElementById("btn-11").addEventListener("click", function (event) {
     event.preventDefault();
-   
     const inputValue1 = getInputValue1("input-1");
     const inputValue = getInputValue("input-1");
     const initialAccountBalance = getBalance("balance-1");
@@ -17,9 +16,7 @@ document.getElementById("btn-11").addEventListener("click", function (event) {
     if (inputValue1 > initialAccountBalance || isNaN(inputValue1) || inputValue1 === '' || inputValue1 <= 0) {
         document.getElementById("my_modal_1").classList.add("hidden");
         alert('Invalid input value!');
-        // document.getElementById("my_modal_1").checked = false;
         return;
-      
     }
 
     else {
